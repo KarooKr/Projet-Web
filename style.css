@@ -1,0 +1,353 @@
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 2.5rem;
+  text-shadow: 3px 1px 8px #00000047;
+  color: rgb(45, 28, 28);
+  text-decoration: underline;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+  margin: 0;
+	text-align: center;
+	font-size: 1.25rem;
+	color: rgb(211, 211, 211);
+}
+
+
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url(./image/background-menu.jpeg) center/cover no-repeat fixed;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+  color: rgb(45, 28, 28);
+  flex-direction: column;
+}
+
+button {
+	background-color: #fff;
+	color: #0c0c12;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+	text-align: left;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+button:hover {
+	border-radius: 8px;
+	transition: 0.3s;
+}
+
+button.active {
+	background-color: #0c0c12;
+	color: #fff;
+}
+
+/* ========================================================================= */
+
+.chat-header {
+	background: rgba(72, 63, 63, 0.35);
+  height: 5vh;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px 8px;
+	border: 2px solid rgb(45, 28, 28);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	backdrop-filter: blur(5px);
+}
+
+.chat-header h2 {
+	width: 100%;
+	height: 20px;
+  color: #fff;
+	text-align: center;
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.chat-header button {
+	max-width: 87px;
+	margin: 0px 5px;
+}
+
+#logo {
+	background: rgba(72, 63, 63, 0.00);
+	color: #fff;
+	backdrop-filter: blur(10px);
+	margin-right: 5px;
+	padding: 1px;
+}
+
+#loginButton {
+	background-color: rgba(255, 255, 255, 0.00);
+	color: #fff;
+	backdrop-filter: blur(10px);
+	margin-right: 5px;
+	padding: 1px;
+}
+
+/* ========================================================================= */
+
+#chat-input {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  height: 90vh;  
+  flex-direction: column;
+  position: relative;
+}
+
+/* ========================================================================= */
+
+.flexbox {
+	background: rgba(72, 63, 63, 0.25);
+	border : 2px solid rgb(45, 28, 28);
+  border-radius: 10px;
+	margin: 10px;
+	width: 420px;
+	position: relative;
+	z-index: 1;
+	backdrop-filter: blur(3px);
+}
+
+.flexbox button {
+	height: 60px;
+	width: 400px;
+	background: rgba(72, 63, 63, 0.25);
+	border: 2px solid rgb(45, 28, 28);
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+}
+
+.flexbox button:hover {
+	background:	 rgba(72, 63, 63, 0.5);
+	box-shadow: 0 0 10px rgba(12, 12, 18, 0.4);
+}
+
+/* ========================================================================= */
+
+#pseudo-input {
+	height: 60px;
+	width: 420px;
+	background: rgba(72, 63, 63, 0.35);
+	border: 2px solid rgb(45, 28, 28);
+	border-radius: 10px;
+	margin : 10px;
+	font-size: 1.1rem;
+	color: #0c0c12;
+	transition: 0.3s;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	backdrop-filter: blur(3px);
+  padding-left: 20px;
+}
+
+#pseudo-input:focus {
+	outline: none;
+	border-color: #0c0c12;
+	box-shadow: 0 0 10px rgba(12, 12, 18, 0.8);
+	background: #ffffff00;
+}
+
+#pseudo-input::placeholder {
+	color: rgba(12, 12, 18, 0.5);
+}
+
+/* ========================================================================= */
+
+.tab-container {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  background: rgba(72, 63, 63, 0.35);
+  border: 2px solid rgb(45, 28, 28);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 0;
+  width: 50%;
+  height: 80%;
+  flex-direction: column;
+}
+
+.tab-container.active {
+  display: flex;
+}
+
+.tab-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border-bottom: 2px solid rgb(45, 28, 28);
+}
+
+.tab-header h3 {
+  margin: 0;
+  color: rgb(45, 28, 28);
+  font-size: 1.3rem;
+  flex: 1;
+}
+
+#closeTabBtn {
+  background-color: rgba(72, 63, 63, 0.00);
+  border: 2px solid rgb(45, 28, 28);
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+  padding: 5px 10px;
+  margin-bottom: 0;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  flex: 1;
+}
+
+.map-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.map-selector-label {
+  display: block;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(45, 28, 28);
+}
+
+.map-selector-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.maps-btn {
+  background-color: rgba(72, 63, 63, 0.00);
+  border: 2px solid rgb(45, 28, 28);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0;
+  min-width: 120px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 0 1 calc(33.33% - 20px);
+  cursor: pointer;
+	backdrop-filter: blur(3px);
+}
+
+.maps-btn:hover {
+  background-color: rgba(72, 63, 63, 0.25);
+  box-shadow: 0 0 10px rgba(12, 12, 18, 0.4);
+}
+
+.maps-btn:active {
+  background-color: rgba(72, 63, 63, 0.50);
+  box-shadow: 0 0 15px rgba(12, 12, 18, 0.8);
+}
+
+.map-label {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: white;
+  background: rgba(72, 63, 63, 0.50);
+  border-top: 1px solid rgb(45, 28, 28);
+}
+
+.maps-btn.locked {
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  font-size: 0;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.fa-lock {
+  flex: 1;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+	text-align: center;
+  width: 30%;
+  margin: 0 auto;
+}
+
+#map1 {
+  flex: 1;
+  background: url(./image/100ANS-FS-C.png) center/cover no-repeat;
+  height: 65%;
+  width: 80%;
+  margin: 10px auto 0 auto;
+}
+
+/* ========================================================================= */
+
+#paraAide {
+  background: rgba(72, 63, 63, 0.35);
+  min-height: 5vh;
+  padding: 4px 10px;
+  	border: 2px solid rgb(45, 28, 28);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  overflow: hidden;
+}
+
+#paraAide button {
+  background-color: transparent;
+}
+
+#footer {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+#footer a {
+  color: #fff;
+}
+
+/* ========================================================================= */
